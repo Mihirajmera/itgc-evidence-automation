@@ -1,0 +1,7 @@
+[
+  {"ChangeId": "CHG-1001", "System": "Payments API", "ApprovedBy": "s.chen", "RequestedBy": "j.alvarez", "TestedBeforeDeploy": true, "DeployDate": "2026-06-10", "EmergencyChange": false},
+  {"ChangeId": "CHG-1002", "System": "Core Banking DB", "ApprovedBy": "r.patel", "RequestedBy": "r.patel", "TestedBeforeDeploy": true, "DeployDate": "2026-06-14", "EmergencyChange": false},
+  {"ChangeId": "CHG-1003", "System": "IAM Policy Update", "ApprovedBy": null, "RequestedBy": "d.okafor", "TestedBeforeDeploy": false, "DeployDate": "2026-06-18", "EmergencyChange": true},
+  {"ChangeId": "CHG-1004", "System": "Data Platform ETL", "ApprovedBy": "k.obrien", "RequestedBy": "t.nguyen", "TestedBeforeDeploy": true, "DeployDate": "2026-06-22", "EmergencyChange": false},
+  {"ChangeId": "CHG-1005", "System": "Payments API", "ApprovedBy": "s.chen", "RequestedBy": "j.alvarez", "TestedBeforeDeploy": false, "DeployDate": "2026-06-25", "EmergencyChange": false}
+]

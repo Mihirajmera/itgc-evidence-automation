@@ -1,0 +1,10 @@
+[
+  {"UserName": "j.alvarez", "Department": "Payments Platform", "MFAEnabled": true, "LastActivity": "2026-07-20", "AccessLevel": "Standard", "TerminationDate": null},
+  {"UserName": "s.chen", "Department": "Cloud Infrastructure", "MFAEnabled": true, "LastActivity": "2026-07-25", "AccessLevel": "Admin", "TerminationDate": null},
+  {"UserName": "r.patel", "Department": "Enterprise IT", "MFAEnabled": false, "LastActivity": "2026-05-02", "AccessLevel": "Standard", "TerminationDate": null},
+  {"UserName": "t.nguyen", "Department": "Retail Banking", "MFAEnabled": true, "LastActivity": "2026-07-27", "AccessLevel": "Standard", "TerminationDate": null},
+  {"UserName": "k.obrien", "Department": "Data Platform", "MFAEnabled": true, "LastActivity": "2026-04-11", "AccessLevel": "Admin", "TerminationDate": "2026-04-15"},
+  {"UserName": "d.okafor", "Department": "Payments Platform", "MFAEnabled": false, "LastActivity": "2026-07-01", "AccessLevel": "Standard", "TerminationDate": null},
+  {"UserName": "m.ajmera", "Department": "GRC", "MFAEnabled": true, "LastActivity": "2026-07-28", "AccessLevel": "ReadOnly", "TerminationDate": null},
+  {"UserName": "former.contractor", "Department": "Cloud Infrastructure", "MFAEnabled": true, "LastActivity": "2026-03-10", "AccessLevel": "Standard", "TerminationDate": "2026-03-12"}
+]
