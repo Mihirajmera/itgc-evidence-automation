@@ -1,0 +1,13 @@
+control_id,control_area,severity,resource,description,detail
+ITGC-AM-01,Access Management,High,r.patel,MFA is not enforced for all user accounts,User r.patel (Standard) has no MFA device registered.
+ITGC-AM-02,Access Management,High,k.obrien,Access was not revoked timely after termination,User k.obrien terminated 2026-04-15 but account still present in IAM.
+ITGC-AM-03,Access Management,Medium,k.obrien,Admin access granted outside expected department scope,User k.obrien in Data Platform holds Admin access.
+ITGC-AM-01,Access Management,High,d.okafor,MFA is not enforced for all user accounts,User d.okafor (Standard) has no MFA device registered.
+ITGC-AM-02,Access Management,High,former.contractor,Access was not revoked timely after termination,User former.contractor terminated 2026-03-12 but account still present in IAM.
+ITGC-CM-02,Change Management,High,CHG-1002,Segregation of duties violation: requester approved their own change,CHG-1002 requested and approved by r.patel.
+ITGC-CM-01,Change Management,High,CHG-1003,Change deployed without a recorded approval,CHG-1003 (IAM Policy Update) deployed 2026-06-18 with no ApprovedBy.
+ITGC-CM-03,Change Management,Medium,CHG-1003,Change deployed without evidence of pre-deployment testing,CHG-1003 (IAM Policy Update) has no recorded test evidence.
+ITGC-CM-03,Change Management,Medium,CHG-1005,Change deployed without evidence of pre-deployment testing,CHG-1005 (Payments API) has no recorded test evidence.
+ITGC-CFG-01,Configuration Management,Medium,r.patel,AWS Config rule 'iam-user-mfa-enabled' reported non-compliant resource,Rule iam-user-mfa-enabled flagged r.patel as NON_COMPLIANT on 2026-07-28.
+ITGC-CFG-01,Configuration Management,Medium,d.okafor,AWS Config rule 'iam-user-mfa-enabled' reported non-compliant resource,Rule iam-user-mfa-enabled flagged d.okafor as NON_COMPLIANT on 2026-07-28.
+ITGC-CFG-01,Configuration Management,Medium,svc-account-etl,AWS Config rule 'access-keys-rotated' reported non-compliant resource,Rule access-keys-rotated flagged svc-account-etl as NON_COMPLIANT on 2026-07-28.

@@ -1,0 +1,13 @@
+cap_id,control_id,description,severity,owner,due_date,status
+CAP-ITGC-0001,ITGC-AM-01,MFA is not enforced for all user accounts,High,IAM Team,2026-08-12,Open
+CAP-ITGC-0002,ITGC-AM-02,Access was not revoked timely after termination,High,IAM Team,2026-08-12,Open
+CAP-ITGC-0003,ITGC-AM-03,Admin access granted outside expected department scope,Medium,IAM Team,2026-08-27,Open
+CAP-ITGC-0004,ITGC-AM-01,MFA is not enforced for all user accounts,High,IAM Team,2026-08-12,Open
+CAP-ITGC-0005,ITGC-AM-02,Access was not revoked timely after termination,High,IAM Team,2026-08-12,Open
+CAP-ITGC-0006,ITGC-CM-02,Segregation of duties violation: requester approved their own change,High,Release Management,2026-08-12,Open
+CAP-ITGC-0007,ITGC-CM-01,Change deployed without a recorded approval,High,Release Management,2026-08-12,Open
+CAP-ITGC-0008,ITGC-CM-03,Change deployed without evidence of pre-deployment testing,Medium,Release Management,2026-08-27,Open
+CAP-ITGC-0009,ITGC-CM-03,Change deployed without evidence of pre-deployment testing,Medium,Release Management,2026-08-27,Open
+CAP-ITGC-0010,ITGC-CFG-01,AWS Config rule 'iam-user-mfa-enabled' reported non-compliant resource,Medium,Cloud Infrastructure,2026-08-27,Open
+CAP-ITGC-0011,ITGC-CFG-01,AWS Config rule 'iam-user-mfa-enabled' reported non-compliant resource,Medium,Cloud Infrastructure,2026-08-27,Open
+CAP-ITGC-0012,ITGC-CFG-01,AWS Config rule 'access-keys-rotated' reported non-compliant resource,Medium,Cloud Infrastructure,2026-08-27,Open
