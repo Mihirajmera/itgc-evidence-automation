@@ -68,11 +68,19 @@ The `EvidenceProvider` interface (`evidence_automation/providers.py`) is pluggab
 | `ITGC-CM-03` | Change Management | Changes tested before deployment |
 | `ITGC-CFG-01` | Configuration Management | AWS Config rules report compliant resources |
 
-## Quick start
+## Installation & Quick Start
+
+You can install the tool locally as a package:
 
 ```bash
-pip install -r requirements.txt
-python cli.py
+pip install -e .
+```
+
+Once installed, run it using the `itgc-evidence-automation` CLI command:
+
+```bash
+# Run against local mock fixtures and output to evidence_packages/
+itgc-evidence-automation
 ```
 
 This runs against the synthetic fixtures in `fixtures/` and writes a timestamped bundle
@@ -109,11 +117,16 @@ itgc-evidence-automation/
     └── test_controls.py
 ```
 
-## Tests
+## 🤖 CI/CD & Testing
+
+This project uses `pytest` for testing, and is configured with automated CI/CD checks:
+- **CI/CD Pipeline**: A GitHub Actions workflow (`.github/workflows/python-ci.yml`) runs automatically on push/pull requests to check formatting (`flake8`), run security analysis (`bandit`), and run tests (`pytest`).
+
+To install dev dependencies and run tests locally:
 
 ```bash
-pip install pytest
-python -m pytest tests/ -v
+pip install -e .[dev]
+pytest
 ```
 
 ## Roadmap
