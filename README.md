@@ -1,8 +1,11 @@
 # 🗂️ SOX ITGC Audit Evidence Automation
 
+[![CI](https://github.com/Mihirajmera/itgc-evidence-automation/actions/workflows/python-ci.yml/badge.svg)](https://github.com/Mihirajmera/itgc-evidence-automation/actions/workflows/python-ci.yml)
+[![CodeQL](https://github.com/Mihirajmera/itgc-evidence-automation/actions/workflows/codeql.yml/badge.svg)](https://github.com/Mihirajmera/itgc-evidence-automation/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mihirajmera/itgc-evidence-automation/badge)](https://scorecard.dev/viewer/?uri=github.com/Mihirajmera/itgc-evidence-automation)
+[![Release](https://img.shields.io/github/v/release/Mihirajmera/itgc-evidence-automation?color=0891b2)](https://github.com/Mihirajmera/itgc-evidence-automation/releases)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![AWS](https://img.shields.io/badge/AWS-IAM%20%7C%20Config-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)](https://aws.amazon.com/)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen?style=for-the-badge&logo=pytest&logoColor=white)](tests/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 Automates the most time-consuming part of a SOX IT General Controls (ITGC) audit cycle:

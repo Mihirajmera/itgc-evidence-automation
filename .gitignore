@@ -7,3 +7,6 @@ build/
 venv/
 test_env/
 evidence_packages/
+
+# local virtual environments
+.venv*/

@@ -2,9 +2,10 @@ name: Python CI
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [main, master]
   pull_request:
-    branches: [ master, main ]
+    branches: [main, master]
+  workflow_dispatch: {}
 
 permissions:
   contents: read
@@ -13,30 +14,26 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          python-version: '3.9'
+          persist-credentials: false
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install .[dev]
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.11'
+          cache: pip
 
-      - name: Lint check with flake8
+      # Every dependency is pinned by version and hash (see requirements.in).
+      - name: Install dependencies
+        run: pip install --require-hashes -r requirements.txt
+
+      - name: Lint (syntax errors and undefined names fail the build)
         run: |
-          # stop the build if there are Python syntax errors or undefined names
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          # exit-zero treats all errors as warnings.
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      - name: Security Scan with Bandit
-        run: |
-          bandit -r evidence_automation/ -ll
+      - name: Security scan with Bandit
+        run: bandit -r evidence_automation -ll
 
-      - name: Run tests with pytest
-        run: |
-          pytest
+      - name: Run tests
+        run: python -m pytest -q
