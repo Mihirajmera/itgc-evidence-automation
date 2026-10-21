@@ -18,6 +18,7 @@ from evidence_automation.cap_tracker import generate_caps, write_cap_register
 def main() -> None:
     parser = argparse.ArgumentParser(description="SOX ITGC audit evidence automation")
     parser.add_argument("--out", default="evidence_packages", help="output directory for evidence bundles")
+    parser.add_argument("--name", help="bundle folder name (default: evidence-<timestamp>)")
     args = parser.parse_args()
 
     provider = MockProvider()
@@ -26,7 +27,7 @@ def main() -> None:
     compliance = provider.get_config_compliance()
 
     findings = run_all_checks(iam_users, changes, compliance)
-    bundle_dir = package_evidence(iam_users, changes, compliance, findings, args.out)
+    bundle_dir = package_evidence(iam_users, changes, compliance, findings, args.out, args.name)
 
     caps = generate_caps(findings)
     write_cap_register(caps, bundle_dir / "cap_register.csv")

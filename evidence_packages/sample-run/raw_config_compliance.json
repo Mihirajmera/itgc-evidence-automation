@@ -1,0 +1,32 @@
+[
+  {
+    "ComplianceType": "NON_COMPLIANT",
+    "ConfigRuleName": "iam-user-mfa-enabled",
+    "EvaluatedAt": "2026-07-28",
+    "ResourceId": "r.patel"
+  },
+  {
+    "ComplianceType": "NON_COMPLIANT",
+    "ConfigRuleName": "iam-user-mfa-enabled",
+    "EvaluatedAt": "2026-07-28",
+    "ResourceId": "d.okafor"
+  },
+  {
+    "ComplianceType": "COMPLIANT",
+    "ConfigRuleName": "s3-bucket-public-read-prohibited",
+    "EvaluatedAt": "2026-07-28",
+    "ResourceId": "prod-payments-logs"
+  },
+  {
+    "ComplianceType": "COMPLIANT",
+    "ConfigRuleName": "cloudtrail-enabled",
+    "EvaluatedAt": "2026-07-28",
+    "ResourceId": "org-trail"
+  },
+  {
+    "ComplianceType": "NON_COMPLIANT",
+    "ConfigRuleName": "access-keys-rotated",
+    "EvaluatedAt": "2026-07-28",
+    "ResourceId": "svc-account-etl"
+  }
+]

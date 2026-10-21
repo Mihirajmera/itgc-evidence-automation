@@ -1,0 +1,66 @@
+[
+  {
+    "AccessLevel": "Standard",
+    "Department": "Payments Platform",
+    "LastActivity": "2026-07-20",
+    "MFAEnabled": true,
+    "TerminationDate": null,
+    "UserName": "j.alvarez"
+  },
+  {
+    "AccessLevel": "Admin",
+    "Department": "Cloud Infrastructure",
+    "LastActivity": "2026-07-25",
+    "MFAEnabled": true,
+    "TerminationDate": null,
+    "UserName": "s.chen"
+  },
+  {
+    "AccessLevel": "Standard",
+    "Department": "Enterprise IT",
+    "LastActivity": "2026-05-02",
+    "MFAEnabled": false,
+    "TerminationDate": null,
+    "UserName": "r.patel"
+  },
+  {
+    "AccessLevel": "Standard",
+    "Department": "Retail Banking",
+    "LastActivity": "2026-07-27",
+    "MFAEnabled": true,
+    "TerminationDate": null,
+    "UserName": "t.nguyen"
+  },
+  {
+    "AccessLevel": "Admin",
+    "Department": "Data Platform",
+    "LastActivity": "2026-04-11",
+    "MFAEnabled": true,
+    "TerminationDate": "2026-04-15",
+    "UserName": "k.obrien"
+  },
+  {
+    "AccessLevel": "Standard",
+    "Department": "Payments Platform",
+    "LastActivity": "2026-07-01",
+    "MFAEnabled": false,
+    "TerminationDate": null,
+    "UserName": "d.okafor"
+  },
+  {
+    "AccessLevel": "ReadOnly",
+    "Department": "GRC",
+    "LastActivity": "2026-07-28",
+    "MFAEnabled": true,
+    "TerminationDate": null,
+    "UserName": "m.ajmera"
+  },
+  {
+    "AccessLevel": "Standard",
+    "Department": "Cloud Infrastructure",
+    "LastActivity": "2026-03-10",
+    "MFAEnabled": true,
+    "TerminationDate": "2026-03-12",
+    "UserName": "former.contractor"
+  }
+]

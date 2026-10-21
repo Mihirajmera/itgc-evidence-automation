@@ -21,6 +21,22 @@ replaces that with a repeatable pipeline: pull evidence → evaluate against con
 rules → package for the auditor → auto-generate CAPs for every exception, with an SLA
 clock already attached based on severity.
 
+## OSCAL output
+
+Every bundle now includes `oscal/assessment-results.json` ([sample](evidence_packages/sample-run/oscal/assessment-results.json)) in the same format as my other tools: one observation per ITGC control, carrying the SHA-256 of the raw evidence it was tested on (`evidence_hashes.json`), and one finding per mapped **NIST SP 800-53 Rev. 5** control (`satisfied` with no exceptions, `not-satisfied` otherwise). GRC platforms that import OSCAL can ingest it directly. IDs are deterministic and `SOURCE_DATE_EPOCH` fixes timestamps, so the same evidence always yields the same bundle.
+
+| ITGC control | NIST 800-53 |
+|---|---|
+| ITGC-AM-01 MFA enforced | IA-2(1), IA-2(2) |
+| ITGC-AM-02 Timely revocation | AC-2(3), PS-4 |
+| ITGC-AM-03 Privileged access scoped | AC-6, AC-2(7) |
+| ITGC-CM-01 Changes approved | CM-3 |
+| ITGC-CM-02 Requester ≠ approver | AC-5, CM-5 |
+| ITGC-CM-03 Changes tested | CM-3(2), SA-11 |
+| ITGC-CFG-01 Config rules compliant | CM-6, CM-2 |
+
+The mapping is my own judgment ([`evidence_automation/oscal.py`](evidence_automation/oscal.py)).
+
 ## Architecture
 
 ```mermaid

@@ -1,11 +1,13 @@
 # SOX ITGC Evidence Package
 
-_Generated 2026-07-28T19:02:32_
+_Generated 2026-10-21T00:00:00+00:00_
 
 - IAM users reviewed: **8**
 - Change records reviewed: **5**
 - Config compliance checks reviewed: **5**
 - Total exceptions found: **12**
+
+Raw evidence is hashed in `evidence_hashes.json`; `oscal/assessment-results.json` maps each control to NIST SP 800-53 for GRC platforms that import OSCAL.
 
 ## Control Coverage
 
@@ -68,3 +70,4 @@ _Generated 2026-07-28T19:02:32_
 ### `ITGC-CFG-01` — AWS Config rule 'access-keys-rotated' reported non-compliant resource (Medium)
 - **Resource:** svc-account-etl
 - **Detail:** Rule access-keys-rotated flagged svc-account-etl as NON_COMPLIANT on 2026-07-28.
+
