@@ -1,0 +1,511 @@
+{
+  "assessment-results": {
+    "uuid": "fff0714d-3a6d-55cf-bafe-718284bbd575",
+    "metadata": {
+      "title": "SOX ITGC control assessment",
+      "last-modified": "2026-10-21T00:00:00+00:00",
+      "version": "1.0",
+      "oscal-version": "1.1.2"
+    },
+    "import-ap": {
+      "href": "#"
+    },
+    "results": [
+      {
+        "uuid": "9cb7fa54-e16c-564b-a55f-1839ad17a0f6",
+        "title": "Automated ITGC control testing",
+        "description": "Access, change and configuration management controls tested against collected evidence.",
+        "start": "2026-10-21T00:00:00+00:00",
+        "end": "2026-10-21T00:00:00+00:00",
+        "reviewed-controls": {
+          "control-selections": [
+            {
+              "include-controls": [
+                {
+                  "control-id": "ac-2.3"
+                },
+                {
+                  "control-id": "ac-2.7"
+                },
+                {
+                  "control-id": "ac-5"
+                },
+                {
+                  "control-id": "ac-6"
+                },
+                {
+                  "control-id": "cm-2"
+                },
+                {
+                  "control-id": "cm-3"
+                },
+                {
+                  "control-id": "cm-3.2"
+                },
+                {
+                  "control-id": "cm-5"
+                },
+                {
+                  "control-id": "cm-6"
+                },
+                {
+                  "control-id": "ia-2.1"
+                },
+                {
+                  "control-id": "ia-2.2"
+                },
+                {
+                  "control-id": "ps-4"
+                },
+                {
+                  "control-id": "sa-11"
+                }
+              ]
+            }
+          ]
+        },
+        "observations": [
+          {
+            "uuid": "a20aa0a8-75f6-5af3-b19e-03455166600b",
+            "title": "ITGC-AM-01",
+            "description": "Access Management: MFA enforced for all active accounts. 2 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "2"
+              },
+              {
+                "name": "exception",
+                "value": "r.patel: MFA is not enforced for all user accounts"
+              },
+              {
+                "name": "exception",
+                "value": "d.okafor: MFA is not enforced for all user accounts"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_iam_users.json",
+                "description": "sha256 f919b161e445c56446c3326a6353c15348407f56124898b6bf140e8297246feb"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          },
+          {
+            "uuid": "b2380622-d5b6-547b-986e-91bafc8a3a0b",
+            "title": "ITGC-AM-02",
+            "description": "Access Management: Access revoked timely after termination. 2 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "2"
+              },
+              {
+                "name": "exception",
+                "value": "k.obrien: Access was not revoked timely after termination"
+              },
+              {
+                "name": "exception",
+                "value": "former.contractor: Access was not revoked timely after termination"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_iam_users.json",
+                "description": "sha256 f919b161e445c56446c3326a6353c15348407f56124898b6bf140e8297246feb"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          },
+          {
+            "uuid": "bd59f152-d255-54e6-9be2-dce3a6ffa926",
+            "title": "ITGC-AM-03",
+            "description": "Access Management: Privileged access scoped to authorized departments. 1 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "1"
+              },
+              {
+                "name": "exception",
+                "value": "k.obrien: Admin access granted outside expected department scope"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_iam_users.json",
+                "description": "sha256 f919b161e445c56446c3326a6353c15348407f56124898b6bf140e8297246feb"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          },
+          {
+            "uuid": "c618a50d-0b90-5e3b-8359-aab81a7b1b90",
+            "title": "ITGC-CM-01",
+            "description": "Change Management: All changes have a recorded approval. 1 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "1"
+              },
+              {
+                "name": "exception",
+                "value": "CHG-1003: Change deployed without a recorded approval"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_change_management.json",
+                "description": "sha256 c9bdca273b38a6f0f1619c5c5b2677a97d799a57e123d2bac17daf8d3d6c76d2"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          },
+          {
+            "uuid": "1addd397-faf0-528c-8f93-dc64ec422781",
+            "title": "ITGC-CM-02",
+            "description": "Change Management: Requester and approver are segregated. 1 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "1"
+              },
+              {
+                "name": "exception",
+                "value": "CHG-1002: Segregation of duties violation: requester approved their own change"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_change_management.json",
+                "description": "sha256 c9bdca273b38a6f0f1619c5c5b2677a97d799a57e123d2bac17daf8d3d6c76d2"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          },
+          {
+            "uuid": "f36d7bc3-3625-5a4b-992b-ae1e0102e9c6",
+            "title": "ITGC-CM-03",
+            "description": "Change Management: Changes tested before deployment. 2 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "2"
+              },
+              {
+                "name": "exception",
+                "value": "CHG-1003: Change deployed without evidence of pre-deployment testing"
+              },
+              {
+                "name": "exception",
+                "value": "CHG-1005: Change deployed without evidence of pre-deployment testing"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_change_management.json",
+                "description": "sha256 c9bdca273b38a6f0f1619c5c5b2677a97d799a57e123d2bac17daf8d3d6c76d2"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          },
+          {
+            "uuid": "75bdd5b9-0da4-55dd-a15c-6a911f5f7777",
+            "title": "ITGC-CFG-01",
+            "description": "Configuration Management: AWS Config rules report compliant resources. 3 exception(s).",
+            "methods": [
+              "TEST"
+            ],
+            "types": [
+              "control-objective"
+            ],
+            "props": [
+              {
+                "name": "exceptions",
+                "value": "3"
+              },
+              {
+                "name": "exception",
+                "value": "r.patel: AWS Config rule 'iam-user-mfa-enabled' reported non-compliant resource"
+              },
+              {
+                "name": "exception",
+                "value": "d.okafor: AWS Config rule 'iam-user-mfa-enabled' reported non-compliant resource"
+              },
+              {
+                "name": "exception",
+                "value": "svc-account-etl: AWS Config rule 'access-keys-rotated' reported non-compliant resource"
+              }
+            ],
+            "relevant-evidence": [
+              {
+                "href": "raw_config_compliance.json",
+                "description": "sha256 842a3acf4ee1f01e6fde7483e477564cbca7680ef0ac38fb77c172754daed216"
+              }
+            ],
+            "collected": "2026-10-21T00:00:00+00:00"
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "f803b468-1718-5407-9b56-dedcb53f02b5",
+            "title": "ITGC-AM-01 -> IA-2(1)",
+            "description": "MFA enforced for all active accounts",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-2.1_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a20aa0a8-75f6-5af3-b19e-03455166600b"
+              }
+            ]
+          },
+          {
+            "uuid": "d42a5bd9-61fe-5486-b35d-476199eae740",
+            "title": "ITGC-AM-01 -> IA-2(2)",
+            "description": "MFA enforced for all active accounts",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-2.2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a20aa0a8-75f6-5af3-b19e-03455166600b"
+              }
+            ]
+          },
+          {
+            "uuid": "ef513a7f-5a09-50c2-8b3f-b0d0ee274235",
+            "title": "ITGC-AM-02 -> AC-2(3)",
+            "description": "Access revoked timely after termination",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2.3_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b2380622-d5b6-547b-986e-91bafc8a3a0b"
+              }
+            ]
+          },
+          {
+            "uuid": "ec303d56-e675-5db4-94f8-b6b28cf5e1e6",
+            "title": "ITGC-AM-02 -> PS-4",
+            "description": "Access revoked timely after termination",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ps-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b2380622-d5b6-547b-986e-91bafc8a3a0b"
+              }
+            ]
+          },
+          {
+            "uuid": "2c6b4a75-af13-5ff9-b2ff-95e20d57f26c",
+            "title": "ITGC-AM-03 -> AC-6",
+            "description": "Privileged access scoped to authorized departments",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bd59f152-d255-54e6-9be2-dce3a6ffa926"
+              }
+            ]
+          },
+          {
+            "uuid": "f2620f72-7bd8-5369-a5b4-a05f269213a4",
+            "title": "ITGC-AM-03 -> AC-2(7)",
+            "description": "Privileged access scoped to authorized departments",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2.7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "bd59f152-d255-54e6-9be2-dce3a6ffa926"
+              }
+            ]
+          },
+          {
+            "uuid": "95394d2f-9b71-5ae2-a269-dc7500bfa681",
+            "title": "ITGC-CM-01 -> CM-3",
+            "description": "All changes have a recorded approval",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-3_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c618a50d-0b90-5e3b-8359-aab81a7b1b90"
+              }
+            ]
+          },
+          {
+            "uuid": "f9de9125-578d-5269-b2fa-b152cecba6e1",
+            "title": "ITGC-CM-02 -> AC-5",
+            "description": "Requester and approver are segregated",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1addd397-faf0-528c-8f93-dc64ec422781"
+              }
+            ]
+          },
+          {
+            "uuid": "73f684df-0bfc-5a3f-a14c-bf165accf23c",
+            "title": "ITGC-CM-02 -> CM-5",
+            "description": "Requester and approver are segregated",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1addd397-faf0-528c-8f93-dc64ec422781"
+              }
+            ]
+          },
+          {
+            "uuid": "deafc79a-fea0-5de7-a161-ef3ce51a1f62",
+            "title": "ITGC-CM-03 -> CM-3(2)",
+            "description": "Changes tested before deployment",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-3.2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f36d7bc3-3625-5a4b-992b-ae1e0102e9c6"
+              }
+            ]
+          },
+          {
+            "uuid": "62ddf30f-dd8f-5c55-bd35-bd800f0ddba8",
+            "title": "ITGC-CM-03 -> SA-11",
+            "description": "Changes tested before deployment",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sa-11_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f36d7bc3-3625-5a4b-992b-ae1e0102e9c6"
+              }
+            ]
+          },
+          {
+            "uuid": "a00e37c4-2467-53f3-922f-c797b6376d1b",
+            "title": "ITGC-CFG-01 -> CM-6",
+            "description": "AWS Config rules report compliant resources",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-6_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "75bdd5b9-0da4-55dd-a15c-6a911f5f7777"
+              }
+            ]
+          },
+          {
+            "uuid": "c3d534b5-f3d0-5343-90da-fb9c0eb774f3",
+            "title": "ITGC-CFG-01 -> CM-2",
+            "description": "AWS Config rules report compliant resources",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "75bdd5b9-0da4-55dd-a15c-6a911f5f7777"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
