@@ -71,9 +71,9 @@ flowchart TD
 The `EvidenceProvider` interface (`evidence_automation/providers.py`) is pluggable:
 - **`MockProvider`** (default, used in this repo) reads synthetic fixtures from
   [`fixtures/`](fixtures/) so the whole pipeline runs with zero credentials.
-- **`AWSProvider`** is a real `boto3`-backed implementation (IAM + AWS Config) for
-  pointing this at an actual AWS account — wire `get_change_records` to your
-  ServiceNow/Jira API to complete it.
+- **`AWSProvider`** reads IAM users and AWS Config compliance from a real account
+  through `boto3`. Change records don't come from AWS, so its `get_change_records`
+  raises `NotImplementedError` until you connect it to your ServiceNow or Jira API.
 
 ## Controls implemented
 
