@@ -13,6 +13,8 @@ pulling access management, change management, and configuration compliance evide
 running it against control objectives, and packaging the result into an audit-ready
 evidence bundle with an auto-generated Corrective Action Plan (CAP) register.
 
+[![The sample report this tool produces, from evidence_packages/sample-run/evidence_summary.md](docs/report.png)](evidence_packages/sample-run/evidence_summary.md)
+
 ## Why this exists
 
 A recurring theme in ITGC audit prep is manually screenshotting IAM consoles, exporting
